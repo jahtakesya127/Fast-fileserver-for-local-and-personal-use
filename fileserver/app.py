@@ -12,7 +12,6 @@ AutoIndex(app, browse_root=ppath)
 
 app.config['UPLOAD_FOLDER'] = './uploadedFiles'
 @app.route('/upload_file')
-@app.route('/jojo')
 def upload_file():
 	return render_template("upload_file.html")
 
