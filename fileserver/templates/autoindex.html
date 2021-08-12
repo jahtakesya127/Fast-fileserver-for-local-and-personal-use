@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="/upload_file">
+        <button type="submit">Upload File</button>
+    </form>
+    {% extends '__autoindex__/autoindex.html' %}
+
+{% block meta %}
+  {{ super() }}
+  <link rel="stylesheet"
+  href="{{ url_for('static', filename='myautoindex.css') }}" />
+{% endblock %}
+
+{% block header %}
+  <div style="width: 500px; margin: 30px auto;">
+    <h2>My Application</h2>
+{% endblock %}
+
+{% block footer %}
+  </div>
+{% endblock %}
+</body>
+</html>
